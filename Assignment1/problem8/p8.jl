@@ -1,8 +1,11 @@
 ##
 using Random
 using Plots
+using LaTeXStrings
 Random.seed!(50)
 
+#event A : having an amount >=10 after 20 days.
+#event B : not going bankrupt in between.
 function Simulate(p,n_trials)
     count_numr=0
     count_denom=0
@@ -37,6 +40,6 @@ end
 ##
 n_trails=10^6
 vals=[Simulate(p,n_trails) for p in 0:0.01:1]
-scatter(0:0.01:1,vals,color=:red,xlabel="p",ylabel="P(toatl amount>=10 | no state of bankrupt)",label="probability",guidefont=(10),legend=:topleft)
-#savefig(plot_1,"/Users/abhisheknegi/Desktop/Stats_4_ds/Assignment1/problem7/a1p7.png")
+plot_1=scatter(0:0.01:1,vals,color=:blue,xlabel="p",ylabel=L"\frac{P(A \bigcap B)}{P(B)}",label="probability",guidefont=(8),legend=:topright)
+savefig(plot_1,"/Users/abhisheknegi/Desktop/Stats_4_ds/Assignment1/problem8/a1p8.png")
 ##
