@@ -34,6 +34,10 @@ function Simulate(p,n_trials)
             end
         end
     end
+
+    if(count_denom==0)
+        return 0.0
+    end
     return count_numr/count_denom
 end
     
