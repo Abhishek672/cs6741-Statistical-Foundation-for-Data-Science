@@ -23,6 +23,7 @@ function Simulate(p,n_trials)
             #if goes bankrupt at least once..
             if(net_profit==-10)
                 flag=true
+                break
             end
         end
 
