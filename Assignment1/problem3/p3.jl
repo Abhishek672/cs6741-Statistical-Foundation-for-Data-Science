@@ -64,7 +64,7 @@ end
 
 ##
 
-Deck=["A",1,2,3,4,5,6,7,8,9,10,"J","Q","K"]
+Deck=["A",2,3,4,5,6,7,8,9,10,"J","Q","K"]
 Deck=repeat(Deck,4)
 rng=MersenneTwister(1)
 shuffle!(rng,Deck)
@@ -87,4 +87,7 @@ scatter(0:num_selections,Th_wr,color=:cyan,label="Theoritical prob",
 title="Theoritical v Empirical(w/o replacement)",xlabel="n",ylabel="Probability",guidefont=(8))
 plot_2=scatter!(0:num_selections,Emp_wr,color=:orange,label="Empirical",marker=:+,markersize=10)
 savefig(plot_2,"/Users/abhisheknegi/Desktop/Stats_4_ds/Assignment1/problem3/a1p3_b.png")
+##
+Th_r
+Th_wr
 ##

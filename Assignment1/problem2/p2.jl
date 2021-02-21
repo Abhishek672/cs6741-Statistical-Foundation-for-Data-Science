@@ -40,7 +40,7 @@ function with_replacement(Deck,simulations)
 end
 ##
 
-Deck=["A",1,2,3,4,5,6,7,8,9,10,"J","Q","K"]
+Deck=["A",2,3,4,5,6,7,8,9,10,"J","Q","K"]
 Deck=repeat(Deck,4)
 rng=MersenneTwister(1)
 shuffle!(rng,Deck)
@@ -60,4 +60,7 @@ Exp_wr=wo_replacement(Deck,simulations)
 plot_2=scatter(0:num_selections,Exp_wr,title="Experiments(w/o replacement)",xlabel="n",ylabel="P(n JACKS)",
 guidefont=(10),color=:cyan,label="")
 savefig(plot_2,"/Users/abhisheknegi/Desktop/Stats_4_ds/Assignment1/problem2/a1p2_b.png")
+##
+Exp_r
+Exp_wr
 ##

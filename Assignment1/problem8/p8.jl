@@ -44,7 +44,11 @@ end
     
 ##
 n_trails=10^6
-vals=[Simulate(p,n_trails) for p in 0:0.01:1]
-plot_1=scatter(0:0.01:1,vals,color=:blue,xlabel="p",ylabel=L"\frac{P(A \bigcap B)}{P(B)}",label="probability",guidefont=(8),legend=:topright)
+vals=[Simulate(p,n_trails) for p in 0:0.1:1]
+plot_1=scatter(0:0.1:1,vals,color=:blue,xlabel="p",ylabel=L"\frac{P(A \bigcap B)}{P(B)}",label="probability",guidefont=(8),legend=:topright)
 savefig(plot_1,"/Users/abhisheknegi/Desktop/Stats_4_ds/Assignment1/problem8/a1p8.png")
+##
+for v in vals
+    println(v)
+end
 ##

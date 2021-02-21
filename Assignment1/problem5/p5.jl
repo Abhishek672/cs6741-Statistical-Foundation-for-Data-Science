@@ -11,6 +11,8 @@ count=0
 for _ in 1:n_trials
     guessed_pass=rand(Dictionary,8)
     if(sum(guessed_pass.==actual_pass)>=2)
+
+        #throw 2 fair dices..
         face1=rand(1:6)
         face2=rand(1:6)
         if(face1==face2)

@@ -1,7 +1,7 @@
 ##
 using Plots
 using Random
-n_samples=[5,50,100,200,500,1000,2000,5000,10000,30000,50000,10^5,500000,10^6]
+n_samples=[5,50,100,200,500,10^3,2000,5000,10^4,30000,50000,10^5,500000,10^6]
 averages=[]
 Random.seed!(4)
 for sample in n_samples
