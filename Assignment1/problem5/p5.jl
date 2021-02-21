@@ -6,7 +6,17 @@ Dictionary=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q',
 'r','s','t','u','v','w','x','y','z','~','!','@', '#', '$', '%', '^', '&', '*', '(', ')',
  '_', '+', '=', '-', '`']
 actual_pass=rand(Dictionary,8);
-n_trails=10^6;
-count=0;
-
+n_trials=10^6;
+count=0
+for _ in 1:n_trials
+    guessed_pass=rand(Dictionary,8)
+    if(sum(guessed_pass.==actual_pass)>=2)
+        face1=rand(1:6)
+        face2=rand(1:6)
+        if(face1==face2)
+            count+=1
+        end
+    end
+end
+println(count/n_trails)
 ##
